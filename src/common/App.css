@@ -110,3 +110,24 @@ input[type="radio"]{
     justify-content: space-between;
     border-right: 4px solid green;
 }
+
+input.search{
+display: block;
+border-radius: 5px;
+padding: 10px 12px;
+border: 1px solid #ccc;
+width: 93%;
+margin-top: 1rem;
+transition: all ease-in 0.4s;
+}
+input.search:focus{
+    outline: #6d28d9;
+    border-color: #6d28d9;
+}
+.addTnx{
+    text-align: center;
+    opacity: 0.6;
+}
+.nomatch{
+    text-align: center;
+}

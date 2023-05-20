@@ -22,17 +22,21 @@ const TransactionComponent = ({ transactions }) => {
   useEffect(() => {
     filterTransactions(searchItem);
   }, [transactions]);
+
+  if(!transactions.length) return <h3 className="addTnx">add some transactions</h3>
   return (
-    <section>
-      <input type="text" defaultValue={searchItem} onChange={changeHandler} />
-      {filteredTnx.map((item) => (
+    <section className="transactionContainer">
+      <input type="text" defaultValue={searchItem} onChange={changeHandler} placeholder="Search for tnx..."  className="search"/>
+      {filteredTnx.length ?
+      filteredTnx.map((item) => (
         <Transaction
           desc={item.desc}
           amount={item.amount}
           key={item.id}
           type={item.type}
         />
-      ))}
+      ))
+    :<p className="nomatch">No transactions matched!</p>}
     </section>
   );
 };

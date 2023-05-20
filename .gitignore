@@ -2,3 +2,7 @@ node_modules/
 README.md
 package.json
 package-lock.json
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
